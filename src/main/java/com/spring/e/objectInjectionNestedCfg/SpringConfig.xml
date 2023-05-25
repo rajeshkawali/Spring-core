@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="beanObject" class="com.spring.e.objectInjectionNestedCfg.SpringBean" name="beanObject-alias-name">
+
+		<property name="springtestA" ref="springtestA" />
+
+		<!-- <property name="springtestB" ref="springtestB" /> -->
+		<!-- <property name="springtestB"> <idref="springtestB"/> </property> -->
+		<property name="springtestB">
+			<bean id="springtestB" class="com.spring.e.objectInjectionNestedCfg.SpringTest">
+				<property name="valueA" value="3" />
+				<property name="valueB" value="4" />
+			</bean>
+		</property>
+		<property name="springtestC">
+			<bean class="com.spring.e.objectInjectionNestedCfg.SpringTest">
+				<property name="valueA" value="5" />
+				<property name="valueB" value="6" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="springtestA" class="com.spring.e.objectInjectionNestedCfg.SpringTest">
+		<property name="valueA" value="1" />
+		<property name="valueB" value="2" />
+	</bean>
+
+	<alias name="beanObject" alias="beanObject-alias" />
+
+</beans>
+

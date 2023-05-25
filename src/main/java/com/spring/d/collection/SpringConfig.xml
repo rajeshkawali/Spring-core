@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="springBeanObject" class="com.spring.d.collection.SpringBean">
+		<property name="map">
+			<map>
+				<entry key="1" value="Rajesh" />
+				<entry key="2" value="Nayan" />
+				<entry key="3" value="Hari" />
+				<entry key="4" value="Sandeep" />
+			</map>
+		</property>
+		<property name="sets">
+			<set>
+				<value>Rajesh</value>
+				<value>Mahesh</value>
+				<value>Chandru</value>
+			</set>
+		</property>
+		<property name="lists">
+			<list>
+				<value>Rajesh</value>
+				<value>Mahesh</value>
+				<value>Chandru</value>
+			</list>
+		</property>
+		<property name="pros">
+			<props>
+				<prop key="admin">admin@admin.com</prop>
+				<prop key="support">support@root.com</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

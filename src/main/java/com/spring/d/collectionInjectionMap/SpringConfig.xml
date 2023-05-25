@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<bean id="springBeanObject" class="com.spring.d.collectionInjectionMap.SpringBean">
+		<property name="listNames">
+			<map>
+				<entry key="1" value="Rajesh" />
+				<entry key="2" value="Nayan" />
+				<entry key="3" value="Hari" />
+				<entry key="4" value="Sandeep" />
+			</map>
+		</property>
+	</bean>
+</beans>
